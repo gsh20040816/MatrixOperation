@@ -1,16 +1,9 @@
 ﻿#include<iostream>
 #include<conio.h>
-#include<opencv2/opencv.hpp>
 #include"menu.h"
 #include"oper1t6.h"
+#include"oper7.h"
 using namespace std;
-using namespace cv;
-
-void demo()
-{
-	Mat image = imread("images/demolena.jpg");
-	imshow("image", image);
-}
 
 int main()
 {
@@ -23,7 +16,7 @@ int main()
 		{
 			cout << "\n确定退出吗？" << endl;
 			char ch = _getch();
-			if (ch == 'y' || ch == 'Y')break;
+			if (ch == 'y' || ch == 'Y' || ch == '\r')break;
 			continue;
 		}
 		cout << endl;
@@ -48,9 +41,11 @@ int main()
 			matrixConv();
 			break;
 		case '7':
-			demo();
+			matrixConvAppl();
 			break;
+		default:
+			cout << "输入错误";
 		}
-		system("pause");
+		waitEnter();
 	}
 }

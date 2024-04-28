@@ -35,3 +35,9 @@ static void menu()
 	cout << "*" << endl;
 	for (int i = 1; i <= Width1 + Width2 * 3 + 1; i++)cout << '*';
 }
+
+void waitEnter()
+{
+	cout << endl << "按回车键继续" << endl;
+	while (_getch() != '\r');
+}
