@@ -52,4 +52,5 @@ int main()
 		}
 		waitEnter();
 	}
+	return 0;
 }
