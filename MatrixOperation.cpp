@@ -3,6 +3,7 @@
 #include"menu.h"
 #include"oper1t6.h"
 #include"oper7.h"
+#include"oper8.h"
 using namespace std;
 
 int main()
@@ -42,6 +43,9 @@ int main()
 			break;
 		case '7':
 			matrixConvAppl();
+			break;
+		case '8':
+			OTSU();
 			break;
 		default:
 			cout << "输入错误";

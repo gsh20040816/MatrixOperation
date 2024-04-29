@@ -25,6 +25,12 @@
     <ClInclude Include="oper7.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="freeMemory.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="oper8.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

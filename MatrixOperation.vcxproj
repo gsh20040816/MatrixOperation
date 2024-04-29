@@ -135,9 +135,11 @@
     <ClCompile Include="MatrixOperation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="freeMemory.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="oper1t6.h" />
     <ClInclude Include="oper7.h" />
+    <ClInclude Include="oper8.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

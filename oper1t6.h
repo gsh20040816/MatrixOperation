@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include"freeMemory.h"
 using namespace std;
 
 void matrixPlus()
@@ -33,7 +34,7 @@ void matrixPlus()
 	if (rowA != rowB || colA != colB)
 	{
 		cout << "矩阵A和矩阵B的行数或列数不相等，无法相加！" << endl;
-		return;
+		return freeMemory(A, rowA), freeMemory(B, rowB);
 	}
 	cout << "矩阵A加矩阵B的结果为：" << endl;
 	for (int i = 0; i < rowA; i++)
@@ -44,6 +45,7 @@ void matrixPlus()
 		}
 		cout << endl;
 	}
+	return freeMemory(A, rowA), freeMemory(B, rowB);
 }
 
 void matrixNumMul()
@@ -73,6 +75,7 @@ void matrixNumMul()
 		}
 		cout << endl;
 	}
+	return freeMemory(A, rowA);
 }
 
 void matrixTrans()
@@ -99,6 +102,7 @@ void matrixTrans()
 		}
 		cout << endl;
 	}
+	return freeMemory(A, rowA);
 }
 
 void matrixMul()
@@ -132,7 +136,7 @@ void matrixMul()
 	if (colA != rowB)
 	{
 		cout << "矩阵A的列数和矩阵B的行数不相等，无法相乘！" << endl;
-		return;
+		return freeMemory(A, rowA), freeMemory(B, rowB);
 	}
 	cout << "矩阵A乘以矩阵B的结果为：" << endl;
 	for (int i = 0; i < rowA; i++)
@@ -148,6 +152,7 @@ void matrixMul()
 		}
 		cout << endl;
 	}
+	return freeMemory(A, rowA), freeMemory(B, rowB);
 }
 
 void matrixHadamardMul()
@@ -181,7 +186,7 @@ void matrixHadamardMul()
 	if (rowA != rowB || colA != colB)
 	{
 		cout << "矩阵A和矩阵B的行数或列数不相等，无法进行Hadamard乘积！" << endl;
-		return;
+		return freeMemory(A, rowA), freeMemory(B, rowB);
 	}
 	cout << "矩阵A和矩阵B的Hadamard乘积为：" << endl;
 	for (int i = 0; i < rowA; i++)
@@ -192,6 +197,7 @@ void matrixHadamardMul()
 		}
 		cout << endl;
 	}
+	return freeMemory(A, rowA), freeMemory(B, rowB);
 }
 
 void matrixConv()
@@ -239,4 +245,5 @@ void matrixConv()
 		}
 		cout << endl;
 	}
+	return freeMemory(A, n), freeMemory(B, 3);
 }

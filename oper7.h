@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<opencv2/opencv.hpp>
+#include"freeMemory.h"
 using namespace std;
 using namespace cv;
 
@@ -100,4 +101,7 @@ void matrixConvAppl()
 		imshow(imageName, image1);
 		waitKey(0);
 	}
+	freeMemory(A, rows);
+	for (int i = 0; i < 6; i++)freeMemory(C[i], rows);
+	delete[] C;
 }
