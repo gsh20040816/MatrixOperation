@@ -30,7 +30,9 @@ static void menu()
 	cout << "*";
 	cout.width(Width2);
 	cout << "7 卷积应用";
-	cout.width(Width2 * 2);
+	cout.width(Width2);
+	cout << "8 OTSU算法";
+	cout.width(Width2);
 	cout << "0 退出系统";
 	cout << "*" << endl;
 	for (int i = 1; i <= Width1 + Width2 * 3 + 1; i++)cout << '*';
