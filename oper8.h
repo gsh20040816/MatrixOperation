@@ -47,7 +47,6 @@ void OTSU()
 		string path = "images/" + images[choice - '1'];
 		Mat image = imread(path);
 		imshow("原图", image);
-		waitKey(0);
 		imshow("二值化图", doOTSU(image));
 		waitKey(0);
 		waitEnter();

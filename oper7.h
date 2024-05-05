@@ -30,7 +30,6 @@ void matrixConvAppl()
 {
 	Mat image = imread("images/demolena.jpg");
 	imshow("原图", image);
-	waitKey(0);
 
 	int rows = image.rows;
 	int cols = image.cols;
@@ -99,8 +98,8 @@ void matrixConvAppl()
 		}
 		string imageName = "第" + to_string(i + 1) + "个卷积图像";
 		imshow(imageName, image1);
-		waitKey(0);
 	}
+	waitKey(0);
 	freeMemory(A, rows);
 	for (int i = 0; i < 6; i++)freeMemory(C[i], rows);
 	delete[] C;
