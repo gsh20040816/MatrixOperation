@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="freeMemory.h" />
+    <ClInclude Include="input.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="oper1t6.h" />
     <ClInclude Include="oper7.h" />

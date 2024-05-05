@@ -1,36 +1,13 @@
 #pragma once
-#include<iostream>
 #include"freeMemory.h"
-using namespace std;
+#include"input.h"
 
 void matrixPlus()
 {
-	cout << "请输入矩阵A的行数和列数：" << endl;
-	int rowA, colA;
-	cin >> rowA >> colA;
-	cout << "请输入矩阵A的元素：" << endl;
-	int** A = new int* [rowA];
-	for (int i = 0; i < rowA; i++)
-	{
-		A[i] = new int[colA];
-		for (int j = 0; j < colA; j++)
-		{
-			cin >> A[i][j];
-		}
-	}
-	cout << "请输入矩阵B的行数和列数：" << endl;
-	int rowB, colB;
-	cin >> rowB >> colB;
-	cout << "请输入矩阵B的元素：" << endl;
-	int** B = new int* [rowB];
-	for (int i = 0; i < rowB; i++)
-	{
-		B[i] = new int[colB];
-		for (int j = 0; j < colB; j++)
-		{
-			cin >> B[i][j];
-		}
-	}
+	int rowA, colA, ** A;
+	if (!input(A, rowA, colA, "A"))return;
+	int rowB, colB, ** B;
+	if (!input(B, rowB, colB, "B"))return;
 	if (rowA != rowB || colA != colB)
 	{
 		cout << "矩阵A和矩阵B的行数或列数不相等，无法相加！" << endl;
@@ -50,19 +27,8 @@ void matrixPlus()
 
 void matrixNumMul()
 {
-	cout << "请输入矩阵A的行数和列数：" << endl;
-	int rowA, colA;
-	cin >> rowA >> colA;
-	cout << "请输入矩阵A的元素：" << endl;
-	int** A = new int* [rowA];
-	for (int i = 0; i < rowA; i++)
-	{
-		A[i] = new int[colA];
-		for (int j = 0; j < colA; j++)
-		{
-			cin >> A[i][j];
-		}
-	}
+	int rowA, colA, ** A;
+	if (!input(A, rowA, colA, "A"))return;
 	cout << "请输入数值k：" << endl;
 	int k;
 	cin >> k;
@@ -80,19 +46,8 @@ void matrixNumMul()
 
 void matrixTrans()
 {
-	cout << "请输入矩阵A的行数和列数：" << endl;
-	int rowA, colA;
-	cin >> rowA >> colA;
-	cout << "请输入矩阵A的元素：" << endl;
-	int** A = new int* [rowA];
-	for (int i = 0; i < rowA; i++)
-	{
-		A[i] = new int[colA];
-		for (int j = 0; j < colA; j++)
-		{
-			cin >> A[i][j];
-		}
-	}
+	int rowA, colA, ** A;
+	if (!input(A, rowA, colA, "A"))return;
 	cout << "矩阵A的转置矩阵为：" << endl;
 	for (int i = 0; i < colA; i++)
 	{
@@ -107,32 +62,10 @@ void matrixTrans()
 
 void matrixMul()
 {
-	cout << "请输入矩阵A的行数和列数：" << endl;
-	int rowA, colA;
-	cin >> rowA >> colA;
-	cout << "请输入矩阵A的元素：" << endl;
-	int** A = new int* [rowA];
-	for (int i = 0; i < rowA; i++)
-	{
-		A[i] = new int[colA];
-		for (int j = 0; j < colA; j++)
-		{
-			cin >> A[i][j];
-		}
-	}
-	cout << "请输入矩阵B的行数和列数：" << endl;
-	int rowB, colB;
-	cin >> rowB >> colB;
-	cout << "请输入矩阵B的元素：" << endl;
-	int** B = new int* [rowB];
-	for (int i = 0; i < rowB; i++)
-	{
-		B[i] = new int[colB];
-		for (int j = 0; j < colB; j++)
-		{
-			cin >> B[i][j];
-		}
-	}
+	int rowA, colA, ** A;
+	if (!input(A, rowA, colA, "A"))return;
+	int rowB, colB, ** B;
+	if (!input(B, rowB, colB, "B"))return;
 	if (colA != rowB)
 	{
 		cout << "矩阵A的列数和矩阵B的行数不相等，无法相乘！" << endl;
@@ -157,32 +90,10 @@ void matrixMul()
 
 void matrixHadamardMul()
 {
-	cout << "请输入矩阵A的行数和列数：" << endl;
-	int rowA, colA;
-	cin >> rowA >> colA;
-	cout << "请输入矩阵A的元素：" << endl;
-	int** A = new int* [rowA];
-	for (int i = 0; i < rowA; i++)
-	{
-		A[i] = new int[colA];
-		for (int j = 0; j < colA; j++)
-		{
-			cin >> A[i][j];
-		}
-	}
-	cout << "请输入矩阵B的行数和列数：" << endl;
-	int rowB, colB;
-	cin >> rowB >> colB;
-	cout << "请输入矩阵B的元素：" << endl;
-	int** B = new int* [rowB];
-	for (int i = 0; i < rowB; i++)
-	{
-		B[i] = new int[colB];
-		for (int j = 0; j < colB; j++)
-		{
-			cin >> B[i][j];
-		}
-	}
+	int rowA, colA, ** A;
+	if (!input(A, rowA, colA,"A"))return;
+	int rowB, colB, ** B;
+	if (!input(B, rowB, colB,"B"))return;
 	if (rowA != rowB || colA != colB)
 	{
 		cout << "矩阵A和矩阵B的行数或列数不相等，无法进行Hadamard乘积！" << endl;
@@ -202,21 +113,8 @@ void matrixHadamardMul()
 
 void matrixConv()
 {
-	cout << "请输入方阵A的边长：" << endl;
-	int n;
-	cin >> n;
-	cout << "请输入方阵A的元素：" << endl;
-	int** A = new int* [n + 2];
-	for (int i = 0; i < n + 2; i++)
-	{
-		A[i] = new int[n + 2];
-		for (int j = 0; j < n + 2; j++)A[i][j] = 0;
-		if (i == 0 || i == n + 1)continue;
-		for (int j = 1; j < n + 1; j++)
-		{
-			cin >> A[i][j];
-		}
-	}
+	int rowA, colA, ** A;
+	if (!input(A, rowA, colA, "A"))return;
 	cout << "卷积核B的边长为3，请输入卷积核B的元素：" << endl;
 	int** B = new int* [3];
 	for (int i = 0; i < 3; i++)
@@ -229,21 +127,24 @@ void matrixConv()
 	}
 	cout << "参数 padding=1, stride=1, dilation=1" << endl;
 	cout << "卷积结果C为：" << endl;
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < rowA; i++)
 	{
-		for (int j = 0; j < n; j++)
+		for (int j = 0; j < colA; j++)
 		{
 			int sum = 0;
-			for (int k = 0; k < 3; k++)
+			for (int k = -1; k <= 1; k++)
 			{
-				for (int l = 0; l < 3; l++)
+				for (int l = -1; l <= 1; l++)
 				{
-					sum += A[i + k][j + l] * B[k][l];
+					if (i + k >= 0 && i + k < rowA && j + l >= 0 && j + l < colA)
+					{
+						sum += A[i + k][j + l] * B[k + 1][l + 1];
+					}
 				}
 			}
 			cout << sum << ' ';
 		}
 		cout << endl;
 	}
-	return freeMemory(A, n), freeMemory(B, 3);
+	return freeMemory(A, rowA), freeMemory(B, 3);
 }

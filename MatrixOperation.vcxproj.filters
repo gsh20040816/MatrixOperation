@@ -31,6 +31,9 @@
     <ClInclude Include="oper8.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
