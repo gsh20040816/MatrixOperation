@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<conio.h>
 #include"menu.h"
 #include"oper1t6.h"

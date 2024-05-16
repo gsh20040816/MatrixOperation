@@ -29,7 +29,7 @@ int** conv(int** A, int n, const int B[3][3])
 void matrixConvAppl()
 {
 	Mat image = imread("images/demolena.jpg");
-	imshow("Ô­Í¼", image);
+	imshow("åŸå›¾", image);
 
 	int rows = image.rows;
 	int cols = image.cols;
@@ -96,7 +96,7 @@ void matrixConvAppl()
 				image1.at<uchar>(j, k) = max(0, min(255, C[i][j][k]));
 			}
 		}
-		string imageName = "µÚ" + to_string(i + 1) + "¸ö¾í»ıÍ¼Ïñ";
+		string imageName = "ç¬¬" + to_string(i + 1) + "ä¸ªå·ç§¯å›¾åƒ";
 		imshow(imageName, image1);
 	}
 	waitKey(0);

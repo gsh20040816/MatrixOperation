@@ -11,35 +11,35 @@ static void menu()
 	cout.width(Width1);
 	cout << "*";
 	cout.width(Width2);
-	cout << "1 ¾ØÕó¼Ó·¨";
+	cout << "1 çŸ©é˜µåŠ æ³•";
 	cout.width(Width2);
-	cout << "2 ¾ØÕóÊý³Ë";
+	cout << "2 çŸ©é˜µæ•°ä¹˜";
 	cout.width(Width2);
-	cout << "3 ¾ØÕó×ªÖÃ";
+	cout << "3 çŸ©é˜µè½¬ç½®";
 	cout << "*" << endl;
 	cout.width(Width1);
 	cout << "*";
 	cout.width(Width2);
-	cout << "4 ¾ØÕó³Ë·¨";
+	cout << "4 çŸ©é˜µä¹˜æ³•";
 	cout.width(Width2);
-	cout << "5 Hadamard³Ë»ý";
+	cout << "5 Hadamardä¹˜ç§¯";
 	cout.width(Width2);
-	cout << "6 ¾ØÕó¾í»ý";
+	cout << "6 çŸ©é˜µå·ç§¯";
 	cout << "*" << endl;
 	cout.width(Width1);
 	cout << "*";
 	cout.width(Width2);
-	cout << "7 ¾í»ýÓ¦ÓÃ";
+	cout << "7 å·ç§¯åº”ç”¨";
 	cout.width(Width2);
-	cout << "8 OTSUËã·¨";
+	cout << "8 OTSUç®—æ³•";
 	cout.width(Width2);
-	cout << "0 ÍË³öÏµÍ³";
+	cout << "0 é€€å‡ºç³»ç»Ÿ";
 	cout << "*" << endl;
 	for (int i = 1; i <= Width1 + Width2 * 3 + 1; i++)cout << '*';
 }
 
 void waitEnter()
 {
-	cout << endl << "°´»Ø³µ¼ü¼ÌÐø" << endl;
+	cout << endl << "æŒ‰å›žè½¦é”®ç»§ç»­" << endl;
 	while (_getch() != '\r');
 }

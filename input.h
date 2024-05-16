@@ -3,11 +3,11 @@
 using namespace std;
 bool input(int**& A, int& row, int& col, string name)
 {
-	cout << "ÇëÊäÈë¾ØÕó" << name << "µÄÐÐÊýºÍÁÐÊý£º";
+	cout << "è¯·è¾“å…¥çŸ©é˜µ" << name << "çš„è¡Œæ•°å’Œåˆ—æ•°ï¼š";
 	cin >> row >> col;
 	if (row <= 0 || col <= 0)
 	{
-		cout << "ÊäÈë´íÎó" << endl;
+		cout << "è¾“å…¥é”™è¯¯" << endl;
 		return false;
 	}
 	A = new int* [row];
@@ -15,7 +15,7 @@ bool input(int**& A, int& row, int& col, string name)
 	{
 		A[i] = new int[col];
 	}
-	cout << "ÇëÊäÈë¾ØÕó" << name << "µÄÔªËØ£¬Ã¿ÐÐÔªËØÖ®¼äÓÃ¿Õ¸ñ¸ô¿ª£¬Ã¿ÐÐ½áÊøºó°´»Ø³µ¼ü£º" << endl;
+	cout << "è¯·è¾“å…¥çŸ©é˜µ" << name << "çš„å…ƒç´ ï¼Œæ¯è¡Œå…ƒç´ ä¹‹é—´ç”¨ç©ºæ ¼éš”å¼€ï¼Œæ¯è¡Œç»“æŸåŽæŒ‰å›žè½¦é”®ï¼š" << endl;
 	for (int i = 0; i < row; i++)
 	{
 		for (int j = 0; j < col; j++)

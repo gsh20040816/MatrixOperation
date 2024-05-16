@@ -24,16 +24,16 @@ void OTSU()
 	while (true)
 	{
 		system("cls");
-		cout << "ÇëÑ¡ÔñÒª½øÐÐOTSUãÐÖµ·Ö¸îµÄÍ¼Æ¬£º" << endl;
+		cout << "è¯·é€‰æ‹©è¦è¿›è¡ŒOTSUé˜ˆå€¼åˆ†å‰²çš„å›¾ç‰‡ï¼š" << endl;
 		for (int i = 0; i < 5; i++)
 		{
 			cout << i + 1 << '.' << images[i] << endl;
 		}
-		cout << 0 << ".·µ»ØÉÏ¼¶²Ëµ¥" << endl;
+		cout << 0 << ".è¿”å›žä¸Šçº§èœå•" << endl;
 		char choice = _getch();
 		if (choice == '0')
 		{
-			cout << "\nÈ·¶¨·µ»ØÂð£¿" << endl;
+			cout << "\nç¡®å®šè¿”å›žå—ï¼Ÿ" << endl;
 			char ch = _getch();
 			if (ch == 'y' || ch == 'Y' || ch == '\r')break;
 			continue;
@@ -41,13 +41,13 @@ void OTSU()
 		cout << endl;
 		if (choice < '1' || choice > '5')
 		{
-			cout << "ÊäÈë´íÎó" << endl;
+			cout << "è¾“å…¥é”™è¯¯" << endl;
 			continue;
 		}
 		string path = "images/" + images[choice - '1'];
 		Mat image = imread(path);
-		imshow("Ô­Í¼", image);
-		imshow("¶þÖµ»¯Í¼", doOTSU(image));
+		imshow("åŽŸå›¾", image);
+		imshow("äºŒå€¼åŒ–å›¾", doOTSU(image));
 		waitKey(0);
 		waitEnter();
 	}

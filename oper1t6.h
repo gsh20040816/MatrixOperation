@@ -10,10 +10,10 @@ void matrixPlus()
 	if (!input(B, rowB, colB, "B"))return;
 	if (rowA != rowB || colA != colB)
 	{
-		cout << "¾ØÕóAºÍ¾ØÕóBµÄÐÐÊý»òÁÐÊý²»ÏàµÈ£¬ÎÞ·¨Ïà¼Ó£¡" << endl;
+		cout << "çŸ©é˜µAå’ŒçŸ©é˜µBçš„è¡Œæ•°æˆ–åˆ—æ•°ä¸ç›¸ç­‰ï¼Œæ— æ³•ç›¸åŠ ï¼" << endl;
 		return freeMemory(A, rowA), freeMemory(B, rowB);
 	}
-	cout << "¾ØÕóA¼Ó¾ØÕóBµÄ½á¹ûÎª£º" << endl;
+	cout << "çŸ©é˜µAåŠ çŸ©é˜µBçš„ç»“æžœä¸ºï¼š" << endl;
 	for (int i = 0; i < rowA; i++)
 	{
 		for (int j = 0; j < colA; j++)
@@ -29,10 +29,10 @@ void matrixNumMul()
 {
 	int rowA, colA, ** A;
 	if (!input(A, rowA, colA, "A"))return;
-	cout << "ÇëÊäÈëÊýÖµk£º" << endl;
+	cout << "è¯·è¾“å…¥æ•°å€¼kï¼š" << endl;
 	int k;
 	cin >> k;
-	cout << "¾ØÕóA³ËÒÔÊýÖµkµÄ½á¹ûÎª£º" << endl;
+	cout << "çŸ©é˜µAä¹˜ä»¥æ•°å€¼kçš„ç»“æžœä¸ºï¼š" << endl;
 	for (int i = 0; i < rowA; i++)
 	{
 		for (int j = 0; j < colA; j++)
@@ -48,7 +48,7 @@ void matrixTrans()
 {
 	int rowA, colA, ** A;
 	if (!input(A, rowA, colA, "A"))return;
-	cout << "¾ØÕóAµÄ×ªÖÃ¾ØÕóÎª£º" << endl;
+	cout << "çŸ©é˜µAçš„è½¬ç½®çŸ©é˜µä¸ºï¼š" << endl;
 	for (int i = 0; i < colA; i++)
 	{
 		for (int j = 0; j < rowA; j++)
@@ -68,10 +68,10 @@ void matrixMul()
 	if (!input(B, rowB, colB, "B"))return;
 	if (colA != rowB)
 	{
-		cout << "¾ØÕóAµÄÁÐÊýºÍ¾ØÕóBµÄÐÐÊý²»ÏàµÈ£¬ÎÞ·¨Ïà³Ë£¡" << endl;
+		cout << "çŸ©é˜µAçš„åˆ—æ•°å’ŒçŸ©é˜µBçš„è¡Œæ•°ä¸ç›¸ç­‰ï¼Œæ— æ³•ç›¸ä¹˜ï¼" << endl;
 		return freeMemory(A, rowA), freeMemory(B, rowB);
 	}
-	cout << "¾ØÕóA³ËÒÔ¾ØÕóBµÄ½á¹ûÎª£º" << endl;
+	cout << "çŸ©é˜µAä¹˜ä»¥çŸ©é˜µBçš„ç»“æžœä¸ºï¼š" << endl;
 	for (int i = 0; i < rowA; i++)
 	{
 		for (int j = 0; j < colB; j++)
@@ -96,10 +96,10 @@ void matrixHadamardMul()
 	if (!input(B, rowB, colB,"B"))return;
 	if (rowA != rowB || colA != colB)
 	{
-		cout << "¾ØÕóAºÍ¾ØÕóBµÄÐÐÊý»òÁÐÊý²»ÏàµÈ£¬ÎÞ·¨½øÐÐHadamard³Ë»ý£¡" << endl;
+		cout << "çŸ©é˜µAå’ŒçŸ©é˜µBçš„è¡Œæ•°æˆ–åˆ—æ•°ä¸ç›¸ç­‰ï¼Œæ— æ³•è¿›è¡ŒHadamardä¹˜ç§¯ï¼" << endl;
 		return freeMemory(A, rowA), freeMemory(B, rowB);
 	}
-	cout << "¾ØÕóAºÍ¾ØÕóBµÄHadamard³Ë»ýÎª£º" << endl;
+	cout << "çŸ©é˜µAå’ŒçŸ©é˜µBçš„Hadamardä¹˜ç§¯ä¸ºï¼š" << endl;
 	for (int i = 0; i < rowA; i++)
 	{
 		for (int j = 0; j < colA; j++)
@@ -115,7 +115,7 @@ void matrixConv()
 {
 	int rowA, colA, ** A;
 	if (!input(A, rowA, colA, "A"))return;
-	cout << "¾í»ýºËBµÄ±ß³¤Îª3£¬ÇëÊäÈë¾í»ýºËBµÄÔªËØ£º" << endl;
+	cout << "å·ç§¯æ ¸Bçš„è¾¹é•¿ä¸º3ï¼Œè¯·è¾“å…¥å·ç§¯æ ¸Bçš„å…ƒç´ ï¼š" << endl;
 	int** B = new int* [3];
 	for (int i = 0; i < 3; i++)
 	{
@@ -125,8 +125,8 @@ void matrixConv()
 			cin >> B[i][j];
 		}
 	}
-	cout << "²ÎÊý padding=1, stride=1, dilation=1" << endl;
-	cout << "¾í»ý½á¹ûCÎª£º" << endl;
+	cout << "å‚æ•° padding=1, stride=1, dilation=1" << endl;
+	cout << "å·ç§¯ç»“æžœCä¸ºï¼š" << endl;
 	for (int i = 0; i < rowA; i++)
 	{
 		for (int j = 0; j < colA; j++)
